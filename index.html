@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Lion Taxi</title>
+</head>
+
+<body>
+
+    <div id="menu-bar" class="box--small">
+        <div class="sites">
+            <a href="index.html" class="button-active">Ny bokning</a>
+            <a href="???.html" class="button">Aktiva bilar</a>
+            <a href="???.html" class="button">Chaufförer</a>
+            <a href="???.html" class="button">Historik</a>
+        </div>
+        <div id="date-and-time">
+            <div id="date-block">
+                <div id="day"></div>
+                <div id="date"></div>
+            </div>
+            <div id="clock"></div>
+        </div>
+    </div>
+    <div id="site">
+        <div id="form" class="box">
+            <img src="assets/Frame 48.png">
+            <i>+ 46 70 33 46 798</i>
+            <label>Ressenär <input type="text" name="name" placeholder="Förnamn Efternamn"></label>
+            <label>Reser från <input type="text" name="name" placeholder="Adress"></label>
+            <label>Reser till <input type="text" name="name" placeholder="Adress"></label>
+
+            <label>
+                Antal passagerare<br>
+                <select name="nr of passangers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </label>
+
+            <div class="checkbox-group">
+
+                <label>
+                    <input type="checkbox" name="preferences" value="allergie-friendly">
+                    <img src="assets/No Smoking.png">Allergivänlig
+                </label>
+
+                <label>
+                    <input type="checkbox" name="preferences" value="large-carry-on">
+                    <img src="assets/Carry On Bag.png">Stort bagage
+                </label>
+
+                <label>
+                    <input type="checkbox" name="preferences" value="animal-friendly">
+                    <img src="assets/Dog.png">Djur
+                </label>
+
+                <label>
+                    <input type="checkbox" name="preferences" value="assistive-technology">
+                    <img src="assets/Assistive Technology.png">Rullstol
+                </label>
+
+                <label>
+                    <input type="checkbox" name="preferences" value="female-staff">
+                    <img src="assets/Female.png"> Kvinnglig personal
+                </label>
+
+            </div>
+
+            <input type="submit" value="Se tillgängliga bilar">
+
+        </div>
+        <div id="info">
+            <div id="map-and-all-drivers">
+                <picture id="map"><img src="assets/Frame 106.png"></picture>
+                <div id="all-drivers" class="box">
+                    <h1>Alla förare</h1>
+                    <table>
+                        <tr>
+                            <th>Bil</th>
+                            <th>Förare</th>
+                            <th>Position</th>
+                            <th>Destination</th>
+                            <th>ETA</th>
+                            <th>Skift</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>300</td>
+                            <td>A. Karlsson</td>
+                            <td>Backa</td>
+                            <td>Landvetter</td>
+                            <td>35 min</td>
+                            <td>3h 10min</td>
+                            <td><img src="assets/Ellipse 1.png"></td>
+                        </tr>
+                        <tr>
+                            <td>300</td>
+                            <td>A. Karlsson</td>
+                            <td>Backa</td>
+                            <td>Landvetter</td>
+                            <td>35 min</td>
+                            <td>3h 10min</td>
+                            <td><img src="assets/Ellipse 1.png"></td>
+                        </tr>
+                        <tr>
+                            <td>300</td>
+                            <td>A. Karlsson</td>
+                            <td>Backa</td>
+                            <td>Landvetter</td>
+                            <td>35 min</td>
+                            <td>3h 10min</td>
+                            <td><img src="assets/Ellipse 1.png"></td>
+                        </tr>
+                        <tr>
+                            <td>300</td>
+                            <td>A. Karlsson</td>
+                            <td>Backa</td>
+                            <td>Landvetter</td>
+                            <td>35 min</td>
+                            <td>3h 10min</td>
+                            <td><img src="assets/Ellipse 1.png"></td>
+                        </tr>
+                        <tr>
+                            <td>300</td>
+                            <td>A. Karlsson</td>
+                            <td>Backa</td>
+                            <td>Landvetter</td>
+                            <td>35 min</td>
+                            <td>3h 10min</td>
+                            <td><img src="assets/Ellipse 1.png"></td>
+                        </tr>
+                        <tr>
+                            <td>300</td>
+                            <td>A. Karlsson</td>
+                            <td>Backa</td>
+                            <td>Landvetter</td>
+                            <td>35 min</td>
+                            <td>3h 10min</td>
+                            <td><img src="assets/Ellipse 1.png"></td>
+                        </tr>
+                        <tr>
+                            <td>300</td>
+                            <td>A. Karlsson</td>
+                            <td>Backa</td>
+                            <td>Landvetter</td>
+                            <td>35 min</td>
+                            <td>3h 10min</td>
+                            <td><img src="assets/Ellipse 1.png"></td>
+                        </tr>
+                        <tr>
+                            <td>300</td>
+                            <td>A. Karlsson</td>
+                            <td>Backa</td>
+                            <td>Landvetter</td>
+                            <td>35 min</td>
+                            <td>3h 10min</td>
+                            <td><img src="assets/Ellipse 1.png"></td>
+                        </tr>
+                        <tr>
+                            <td>300</td>
+                            <td>A. Karlsson</td>
+                            <td>Backa</td>
+                            <td>Landvetter</td>
+                            <td>35 min</td>
+                            <td>3h 10min</td>
+                            <td><img src="assets/Ellipse 1.png"></td>
+                        </tr>
+                        <tr>
+                            <td>300</td>
+                            <td>A. Karlsson</td>
+                            <td>Backa</td>
+                            <td>Landvetter</td>
+                            <td>35 min</td>
+                            <td>3h 10min</td>
+                            <td><img src="assets/Ellipse 1.png"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="drivers"><img src="assets/orginal.png">
+                <img src="assets/orginal.png">
+                <img src="assets/orginal.png">
+                <img src="assets/orginal.png">
+                <img src="assets/orginal.png">
+            </div>
+        </div>
+    </div>
+
+</body>
