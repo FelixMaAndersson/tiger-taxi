@@ -9,10 +9,6 @@ body {
     gap: 1rem;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 .box {
     display: flex;
     gap: 1rem;
@@ -23,7 +19,7 @@ body {
     box-shadow: 2px 2px 5px rgb(198, 198, 198);
 }
 
-.box--small {
+.box-small {
     display: flex;
     gap: 1rem;
     padding: 0.5rem 1rem;
@@ -33,29 +29,29 @@ body {
     box-shadow: 2px 2px 5px rgb(198, 198, 198);
 }
 
-.box--car {
+.box-car {
     display: flex;
-     flex-direction: column;
-         gap: 0rem;
+    flex-direction: column;
+    gap: 0rem;
     padding: 0.75rem;
-    border:1px solid rgb(177, 177, 177);
+    border: 1px solid rgb(177, 177, 177);
     border-radius: 15px;
     box-shadow: 1px 2px 4px rgb(198, 198, 198);
 }
 
-.box--car:hover {
-        box-shadow: 1px 2px 4px rgb(78, 78, 78);
+.box-car:hover {
+    box-shadow: 1px 2px 4px rgb(78, 78, 78);
 }
 
-.box--car--selected {
-     display: flex;
-     flex-direction: column;
-         gap: 0rem;
+.box-car-selected {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
     padding: 0.75rem;
-    border:3px solid rgb(177, 177, 177);
-     border-radius: 15px;
+    border: 3px solid rgb(177, 177, 177);
+    border-radius: 15px;
+    box-shadow: 1px 2px 4px rgb(78, 78, 78);
     background-color: rgba(228, 251, 230, 1);
-        box-shadow: 1px 2px 4px rgb(78, 78, 78);
 }
 
 #menu-bar {
@@ -81,7 +77,7 @@ body {
     align-items: flex-end;
     justify-content: center;
     line-height: 1.1;
-    gap:0.2rem;
+    gap: 0.2rem;
 }
 
 #day,
@@ -159,7 +155,7 @@ h1 {
 
 #form {
     flex: 1;
- 
+
     display: grid;
     min-width: 0;
     gap: 1rem;
@@ -181,10 +177,16 @@ h1 {
 
 #form input[type="text"] {
     width: 100%;
+    box-sizing: border-box;
     border-radius: 4px;
     border: 1px solid rgb(0, 0, 0);
     padding: 0.25rem;
     background-color: rgba(217, 217, 217, 1);
+}
+
+#form input[type="text"]:active {
+ 
+    background-color: rgb(95, 27, 27);
 }
 
 #form input[type="submit"] {
@@ -220,8 +222,10 @@ h1 {
 
 .checkbox-group {
     display: grid;
-    grid-template-columns: 1fr 1fr;   /* two columns */
-    gap: 0.5rem 0rem;    /* row gap / column gap */
+    grid-template-columns: 1fr 1fr;
+    /* two columns */
+    gap: 0.5rem 0rem;
+    /* row gap / column gap */
     border: 0;
     padding: 0;
     margin: 0;
@@ -369,27 +373,29 @@ h1 {
     margin: 0;
 }
 
+
 #drivers table {
     font-size: x-small;
     text-align: left;
+    margin-top: 0.75rem;
 }
 
 .driver-info {
- margin: 0.5rem;
+    margin: 0.5rem;
 }
 
 #drivers input[type="submit"] {
-width: max-content;
-align-self: center;
-padding-top: 0.25rem;
-padding-bottom: 0.25rem;
-padding-left: 0.75rem;
-padding-right: 0.75rem;
-border: 0;
-border-radius: 6px;
-background-color: rgba(126, 159, 202, 1);
-color: #ffffff;
-font-weight: bold;
+    width: max-content;
+    align-self: center;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border: 0;
+    border-radius: 6px;
+    background-color: rgba(126, 159, 202, 1);
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .work-load {
