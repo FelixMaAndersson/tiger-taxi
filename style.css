@@ -184,9 +184,9 @@ h1 {
     background-color: rgba(217, 217, 217, 1);
 }
 
-#form input[type="text"]:active {
- 
-    background-color: rgb(95, 27, 27);
+#form input:-webkit-autofill:valid {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 #form input[type="submit"] {
@@ -203,6 +203,7 @@ h1 {
     color: rgb(195, 195, 195);
 }
 
+
 #form br {
     margin-top: 0;
     margin-bottom: 0.25rem;
@@ -218,6 +219,10 @@ h1 {
     background-color: rgba(217, 217, 217, 1);
     border-radius: 4px;
     padding: 0.25rem;
+}
+
+#form label select:valid {
+    background-color: white;
 }
 
 .checkbox-group {
