@@ -389,7 +389,7 @@ h1 {
     margin: 0.5rem;
 }
 
-#drivers input[type="submit"] {
+.selectCars {
     width: max-content;
     align-self: center;
     padding-top: 0.25rem;
@@ -403,10 +403,87 @@ h1 {
     font-weight: bold;
 }
 
+.selectCars:active {
+    transform: scale(0.95);
+    background-color: rgb(72, 116, 173);
+    ;
+}
+
 .work-load {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     margin-bottom: 0rem;
+}
+
+#confirm:empty {
+    display: none;
+}
+
+#confirm.active {
+    background-color: #e6e6e6;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+#confirm {
+    background-color: #e6e6e6;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: sans-serif;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.car-nr {
+    text-align: start !important;
+}
+
+#confirm p {
+    margin: 4px 0;
+    color: #000;
+    text-align: left;
+}
+
+
+.action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.ring-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.ring-group img {
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
+    padding: 8px;
+    object-fit: contain;
+}
+
+#btnConfirm {
+    width: max-content;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    border: 0;
+    background-color: rgba(126, 159, 202, 1);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+#btnConfirm:hover {
+    opacity: 0.9;
+    background-color: rgb(72, 116, 173);
 }
 
 @media (max-width: 1200px) {
