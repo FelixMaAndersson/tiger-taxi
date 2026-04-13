@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const carNr = box.querySelector(".carNr")?.textContent;
         const driverName = box.querySelector(".driverName")?.textContent;
         const eta = box.querySelector(".eta")?.textContent;
-        const ringImg = '<img src="assets/Frame 48.png" style= "width:16px;">';
+        const ringImg = '<img src="assets/Frame.png" style= "width:16px;">';
         const ringGroup = `<div class="ring-group">${ringImg} <span>Ring förare</span></div>`;
         const actionBtn = '<button id="btnConfirm">Bekräfta</button>';
 
