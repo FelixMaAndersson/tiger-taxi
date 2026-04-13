@@ -40,29 +40,67 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateConfirm(box) {
+        if (!box) {
+            console.error("Box not found!");
+            return;
+        }
 
-        if (!box) return console.error("Box not found!");
+        const carNr = box.querySelector(".carNr")?.textContent || "";
+        const driverName = box.querySelector(".driverName")?.textContent || "";
+        const eta = box.querySelector(".eta")?.textContent || "";
 
-        const carNr = box.querySelector(".carNr")?.textContent;
-        const driverName = box.querySelector(".driverName")?.textContent;
-        const eta = box.querySelector(".eta")?.textContent;
-        const ringImg = '<img src="assets/Frame.png" style= "width:16px;">';
-        const ringGroup = `<div class="ring-group">${ringImg} <span>Ring förare</span></div>`;
-        const actionBtn = '<button id="btnConfirm">Bekräfta</button>';
+        const confirmBox = document.getElementById("confirm");
+        if (!confirmBox) {
+            console.error("#confirm not found!");
+            return;
+        }
 
+        confirmBox.replaceChildren();
 
-        document.getElementById("confirm").innerHTML = `
-    <div class="confirm-content">
-        <p class="car-nr"><strong>${carNr}</strong></p>
-        <p class="driver-info"> <strong>Förare: ${driverName}</strong></p>
-        <p class="eta-info"><strong>${eta}</strong></p>
-        <div class="action-row">
-            ${ringGroup}
-            ${actionBtn}
-        </div>
-    </div>
-`;
+        const content = document.createElement("div");
+        content.classList.add("confirm-content");
 
+        const carNrP = document.createElement("p");
+        carNrP.classList.add("car-nr");
+        const carNrStrong = document.createElement("strong");
+        carNrStrong.textContent = carNr;
+        carNrP.appendChild(carNrStrong);
+
+        const driverP = document.createElement("p");
+        driverP.classList.add("driver-info");
+        const driverStrong = document.createElement("strong");
+        driverStrong.textContent = `Förare: ${driverName}`;
+        driverP.appendChild(driverStrong);
+
+        const etaP = document.createElement("p");
+        etaP.classList.add("eta-info");
+        const etaStrong = document.createElement("strong");
+        etaStrong.textContent = eta;
+        etaP.appendChild(etaStrong);
+
+        const actionRow = document.createElement("div");
+        actionRow.classList.add("action-row");
+
+        const ringGroup = document.createElement("div");
+        ringGroup.classList.add("ring-group");
+
+        const ringImg = document.createElement("img");
+        ringImg.src = "assets/Frame 48.png";
+        ringImg.alt = "Ring förare";
+        ringImg.width = 16;
+
+        const ringSpan = document.createElement("span");
+        ringSpan.textContent = "Ring förare";
+
+        const actionBtn = document.createElement("button");
+        actionBtn.id = "btnConfirm";
+        actionBtn.classList.add("selectCars");
+        actionBtn.textContent = "Bekräfta";
+
+        ringGroup.append(ringImg, ringSpan);
+        actionRow.append(ringGroup, actionBtn);
+        content.append(carNrP, driverP, etaP, actionRow);
+        confirmBox.append(content);
     }
 
     const selectCars = document.getElementsByClassName("selectCars");
