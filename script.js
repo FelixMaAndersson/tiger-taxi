@@ -90,6 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target && e.target.id === "btnConfirm") {
             if (currentSelectBtn) {
                 currentSelectBtn.textContent = "Vald";
+
+                const box = currentSelectBtn.closest(".box-car");
+                if (box) {
+                    box.classList.add("selected");
+                }
             }
         }
     });

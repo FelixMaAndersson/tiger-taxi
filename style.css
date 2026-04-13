@@ -435,6 +435,10 @@ h1 {
     text-align: left;
 }
 
+.box-car.selected {
+    background-color: rgb(222, 245, 224)
+}
+
 .confirm-content p {
     margin: 4px 0;
     color: #000;
