@@ -435,12 +435,13 @@ h1 {
     text-align: left;
 }
 
-#confirm-content p {
+.confirm-content p {
     margin: 4px 0;
     color: #000;
     align-self: flex-start;
     text-align: left;
-
+    font-family: Sans-serif;
+    line-height: 160%;
 }
 
 .confirm-content {
@@ -450,7 +451,7 @@ h1 {
     align-items: flex-start;
 }
 
-.action-row {
+div.action-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -473,14 +474,14 @@ h1 {
 }
 
 #btnConfirm {
-    width: 40%;
-    padding: 0.75rem 1.5rem;
     border-radius: 12px;
     border: 0;
     background-color: rgba(126, 159, 202, 1);
     color: rgb(255, 255, 255);
     font-weight: bold;
     cursor: pointer;
+    margin-left: 2rem;
+    padding: 10px;
 }
 
 

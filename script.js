@@ -47,21 +47,31 @@ document.addEventListener("DOMContentLoaded", function () {
         const driverName = box.querySelector(".driverName")?.textContent;
         const eta = box.querySelector(".eta")?.textContent;
         const ringImg = '<img src="assets/Frame.png" style= "width:16px;">';
-        const ringGroup = `<div class="ring-group">${ringImg} <span>Ring förare</span></div>`;
-        const actionBtn = '<button id="btnConfirm">Bekräfta</button>';
+        const actionRow = `<div class="action-wrapper">
+        <div class="ring-group">
+            <img src="assets/Frame.png" style="width:16px;">
+            <span>Ring förare</span>
+        </div>
+            <button id="btnConfirm">Bekräfta</button>
+        </div>`;
+
+        const confirmEl = document.getElementById("confirm");
+        confirmEl.replaceChildren();
 
 
-        document.getElementById("confirm").innerHTML = `
-    <div class="confirm-content">
+        const temp = document.createElement("div");
+        temp.innerHTML = `
+        <div class="confirm-content">
         <p class="car-nr"><strong>${carNr}</strong></p>
-        <p class="driver-info"> <strong>Förare: ${driverName}</strong></p>
+        <p class="driver-info"><strong>Förare: ${driverName}</strong></p>
         <p class="eta-info"><strong>${eta}</strong></p>
         <div class="action-row">
-            ${ringGroup}
-            ${actionBtn}
+            ${actionRow}
         </div>
-    </div>
-`;
+        </div>
+        `;
+
+        confirmEl.appendChild(temp.firstElementChild);
 
     }
 
