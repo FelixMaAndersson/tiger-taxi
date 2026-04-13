@@ -184,8 +184,14 @@ h1 {
     background-color: rgba(217, 217, 217, 1);
 }
 
-#form input:-webkit-autofill:valid {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
+#form input[type="text"]:not(:placeholder-shown) {
+    background-color: white !important;
+}
+
+#form input[type="text"]:-webkit-autofill,
+#form input[type="text"]:-webkit-autofill:hover,
+#form input[type="text"]:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
     transition: background-color 5000s ease-in-out 0s;
 }
 
