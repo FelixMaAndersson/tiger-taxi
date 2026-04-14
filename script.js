@@ -1,4 +1,3 @@
-
 function updateClock() {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, "0");
@@ -6,12 +5,11 @@ function updateClock() {
 
     const dayNo = now.getDate();
 
-
     const dayNames = [
         "Söndag", "Måndag", "Tisdag",
         "Onsdag", "Torsdag", "Fredag",
         "Lördag",
-    ]
+    ];
 
     const dayName = dayNames[now.getDay()];
 
@@ -34,19 +32,19 @@ setInterval(updateClock, 1000);
 document.addEventListener("DOMContentLoaded", function () {
 
     let currentSelectBtn = null;
+
     function removeCarValid() {
         const carValid = document.getElementById("carValid");
         if (carValid) carValid.remove();
     }
 
     function updateConfirm(box) {
-
         if (!box) return console.error("Box not found!");
 
         const carNr = box.querySelector(".carNr")?.textContent;
         const driverName = box.querySelector(".driverName")?.textContent;
         const eta = box.querySelector(".eta")?.textContent;
-        const ringImg = '<img src="assets/Frame.png" style= "width:16px;">';
+
         const actionRow = `<div class="action-wrapper">
         <div class="ring-group">
             <img src="assets/Frame.png" style="width:16px;">
@@ -57,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const confirmEl = document.getElementById("confirm");
         confirmEl.replaceChildren();
-
 
         const temp = document.createElement("div");
         temp.innerHTML = `
@@ -72,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
 
         confirmEl.appendChild(temp.firstElementChild);
-
     }
 
     const selectCars = document.getElementsByClassName("selectCars");
@@ -99,6 +95,39 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    const phoneIcon = document.getElementById("phoneIcon");
+    const callTimer = document.getElementById("callTimer");
+    const carValidBtn = document.getElementById("carValid");
+    const drivers = document.getElementById("drivers");
+
+    let seconds = 0;
+    let timerStarted = false;
+
+    function formatTime(sec) {
+        const m = String(Math.floor(sec / 60)).padStart(2, "0");
+        const s = String(sec % 60).padStart(2, "0");
+        return `${m}:${s}`;
+    }
+
+    if (phoneIcon) {
+        phoneIcon.addEventListener("click", function () {
+            if (timerStarted) return;
+            timerStarted = true;
+
+            phoneIcon.style.filter = "grayscale(100%)";
+            callTimer.textContent = "00:00";
+
+            setInterval(() => {
+                seconds++;
+                callTimer.textContent = formatTime(seconds);
+            }, 1000);
+        });
+    }
+
+    if (carValidBtn && drivers) {
+        carValidBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            drivers.classList.remove("blurred");
+        });
+    }
 });
-
-

@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="sv">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
     <title>Lion Taxi</title>
 </head>
 
@@ -30,10 +27,13 @@
             <div id="clock"></div>
         </div>
     </div>
+
     <div id="site">
         <div id="form" class="box">
-            <img src="assets/Frame 48.png">
+            <img id="phoneIcon" src="assets/Frame 48.png">
             <p><i>+ 46 70 33 46 798</i></p>
+            <p id="callTimer"></p>
+
             <label>Ressenär<br> <input type="text" name="name" placeholder="Förnamn Efternamn"></label>
             <label>Reser från<br> <input type="text" name="name" placeholder="Adress"></label>
             <label>Reser till<br> <input type="text" name="name" placeholder="Adress"></label>
@@ -56,7 +56,6 @@
             </label>
 
             <div class="checkbox-group">
-
                 <label>
                     <input type="checkbox" name="preferences" value="allergie-friendly">
                     <img src="assets/No Smoking.png">Allergivänlig
@@ -79,17 +78,18 @@
 
                 <label>
                     <input type="checkbox" name="preferences" value="female-staff">
-                    <img src="assets/Female.png"> Kvinnglig personal
+                    <img src="assets/Female.png">Kvinnlig personal
                 </label>
-
             </div>
+
             <div id="confirm"></div>
             <input id="carValid" type="submit" value="Se tillgängliga bilar">
-
         </div>
+
         <div id="info">
             <div id="map-and-all-drivers">
                 <picture id="map"><img src="assets/Frame 106.png"></picture>
+
                 <div id="all-drivers" class="box">
                     <h1>Alla förare</h1>
                     <table>
@@ -195,20 +195,18 @@
                     </table>
                 </div>
             </div>
-            <div id="drivers">
-                <div class="box-car">
 
+            <div id="drivers" class="blurred">
+                <div class="box-car">
                     <p><b class="carNr">Bil 143</b></p>
                     <img src="assets/Vector.png">
                     <table>
                         <tr>
-
                             <th>Förare</th>
                             <th>Position</th>
                             <th>Status</th>
                         </tr>
                         <tr>
-
                             <td class="driverName">A. Karlsson</td>
                             <td>Backa</td>
                             <td>Ledig körning</td>
@@ -221,98 +219,93 @@
                     <div class="work-load"><img src="assets/Frame 88.png"></div>
                     <button class="selectCars" type="button">Välj Bil</button>
                 </div>
+
                 <div class="box-car">
-                    <p><b class="carNr">Bil 143</b></p>
+                    <p><b class="carNr">Bil 300</b></p>
                     <img src="assets/Vector.png">
                     <table>
                         <tr>
-
                             <th>Förare</th>
                             <th>Position</th>
                             <th>Status</th>
                         </tr>
                         <tr>
-
-                            <td class="driverName">A. Karlsson</td>
-                            <td>Backa</td>
+                            <td class="driverName">J. Sandberg</td>
+                            <td>Kortedala</td>
                             <td>Ledig körning</td>
                         </tr>
                     </table>
                     <div class="driver-info">
-                        <p class="eta"><b>ETA:</b> 20min</p>
-                        <p><b>Skift start:</b> 10:00</p>
-                    </div>
-                    <div class="work-load"><img src="assets/Frame 88.png"></div>
-                    <button class="selectCars" type="button">Välj Bil</button>
-
-                </div>
-                <div class="box-car">
-                    <p><b class="carNr">Bil 143</b></p>
-                    <img src="assets/Vector.png">
-                    <table>
-                        <tr>
-
-                            <th>Förare</th>
-                            <th>Position</th>
-                            <th>Status</th>
-                        </tr>
-                        <tr>
-
-                            <td class="driverName">A. Karlsson</td>
-                            <td>Backa</td>
-                            <td>Ledig körning</td>
-                        </tr>
-                    </table>
-                    <div class="driver-info">
-                        <p class="eta"><b>ETA:</b> 20min</p>
-                        <p><b>Skift start:</b> 10:00</p>
+                        <p class="eta"><b>ETA:</b> 24min</p>
+                        <p><b>Skift start:</b> 09:00</p>
                     </div>
                     <div class="work-load"><img src="assets/Frame 88.png"></div>
                     <button class="selectCars" type="button">Välj Bil</button>
                 </div>
+
                 <div class="box-car">
-                    <p><b class="carNr">Bil 143</b></p>
+                    <p><b class="carNr">Bil 121</b></p>
                     <img src="assets/Vector.png">
                     <table>
                         <tr>
-
                             <th>Förare</th>
                             <th>Position</th>
                             <th>Status</th>
                         </tr>
                         <tr>
-
                             <td class="driverName">A. Karlsson</td>
-                            <td>Backa</td>
-                            <td>Ledig körning</td>
+                            <td>Lindholmen</td>
+                            <td>Pågående körning</td>
                         </tr>
                     </table>
                     <div class="driver-info">
-                        <p class="eta"><b>ETA:</b> 20min</p>
-                        <p><b>Skift start:</b> 10:00</p>
+                        <p class="eta"><b>ETA:</b> 35min</p>
+                        <p><b>Skift start:</b> 10:30</p>
                     </div>
                     <div class="work-load"><img src="assets/Frame 88.png"></div>
                     <button class="selectCars" type="button">Välj Bil</button>
                 </div>
+
                 <div class="box-car">
-                    <p><b class="carNr">Bil 143</b></p>
+                    <p><b class="carNr">Bil 235</b></p>
                     <img src="assets/Vector.png">
                     <table>
                         <tr>
-
                             <th>Förare</th>
                             <th>Position</th>
                             <th>Status</th>
                         </tr>
                         <tr>
-
-                            <td class="driverName">A. Karlsson</td>
-                            <td>Backa</td>
+                            <td class="driverName">M. Ahmed</td>
+                            <td>Frölunda</td>
                             <td>Ledig körning</td>
                         </tr>
                     </table>
                     <div class="driver-info">
-                        <p class="eta"><b>ETA:</b> 20min</p>
+                        <p class="eta"><b>ETA:</b> 18min</p>
+                        <p><b>Skift start:</b> 11:00</p>
+                    </div>
+                    <div class="work-load"><img src="assets/Frame 88.png"></div>
+                    <button class="selectCars" type="button">Välj Bil</button>
+                </div>
+
+                <div class="box-car">
+                    <p><b class="carNr">Bil 248</b></p>
+                    <img src="assets/Vector.png">
+                    <table>
+                        <tr>
+                            <th>Förare</th>
+                            <th>Position</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td class="driverName">N. Persson</td>
+                            <td>Backa</td>
+                            <td>Pågående körning</td>
+                        </tr>
+                    </table>
+                    <div class="driver-info">
+                        <p class="eta"><b>ETA:</b> 14min</p>
                         <p><b>Skift start:</b> 10:00</p>
                     </div>
                     <div class="work-load"><img src="assets/Frame 88.png"></div>
@@ -323,3 +316,4 @@
     </div>
 
 </body>
+</html>
